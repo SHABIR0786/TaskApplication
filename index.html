@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Task Application</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="materialize.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+        crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="materialize.css">
+     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cloud.tinymce.com/5/tinymce.min.js?apiKey=7shp6fxypw37vhnr3j4j5o76lub0fqb6v8ldft7m7kak0r4p"></script>
+    <script>tinymce.init({ selector: 'textarea' });</script>
+</head>
+
+<body>
+    <div class="mynavbar navbar-fixed-top">
+        <span class="opennavbtn" onclick="openNav()">&#9776;</span>
+        <b>Task Application</b>
+    </div>
+    <div id="mySidenav" class="sidenav">
+        <div class="sidenavtop">
+            <span class="closenavbtn" onclick="closeNav()">&#9776;</span>
+
+        </div>
+        <div class="sidenavbody">
+            <p>
+                <span>Add Task</span>
+            </p>
+            <p>
+                <span>Completed Task</span>
+            </p>
+            <p>
+                <span>Expired Task</span>
+            </p>
+        </div>
+    </div>
+    <div id="container-body" class="container-fluid">
+        
+            <!-- Modal Trigger -->
+            <div id="addTask">
+                <a class="waves-effect waves-light btn modal-trigger" href="#modal1">
+                    <i class="fas fa-plus-square"></i>
+                </a>
+            </div>
+    
+            <div class="row">
+                    <div class="col s12">
+                      <ul class="tabs">
+                        <li class="tab col s4"><a class="active" href="#test1">Continue Tasks</a></li>
+                        <li class="tab col s4"><a id="completetask" href="#test2">Completed Tasks</a></li>
+                        <li class="tab col s4"><a id="expiretask" href="#test3">Expired Tasks</a></li>
+                      </ul>
+                    </div>
+                    <div id="test1" class="col s12">
+                        <div class="row" id="collection">
+                         
+                          </div>
+
+                    </div>
+                    <div id="test2" class="col s12">  
+                        <div class="row" id="collection">
+                         
+                        </div>
+                    </div>
+                    <div id="test3" class="col s12"> 
+                        <div class="row" id="collection">
+                         
+                        </div>
+                    </div>
+                  </div>
+                  <div id="modal2" class="modal">
+                        <div class="model-header"><p>Task</p></div> 
+                                <div class="modal-content">
+                                        <div class="row" id="taskshowresult">
+                                            
+                                        </div>
+                                    </div>
+                                    </div>
+
+            <!-- Modal Structure -->
+        <div id="modal1" class="modal">
+        <div class="model-header"><p>Add New Task</p></div> 
+                <div class="modal-content">
+                <div class="row">
+                    <form class="col s12" id="form">
+                                  <div class="row">
+                                    <div class="input-field col s4">
+                                      <input id="task_title" type="text" class="validate">
+                                      <label for="task_title">Task Title</label>
+                                    </div>
+                                    <div class="input-field col s4">                                
+                                    <select id="task_priority">
+                                            <option value="" disabled selected>Choose your option</option>
+                                            <option value="1">Maximum</option>
+                                            <option value="2">Good</option>
+                                            <option value="3">Normal</option>
+                                            <option value="4">Average</option>
+                                            <option value="5">Low</option>
+                                          </select>
+                                          <label>Task Priority</label>
+                                          </div>
+                                    <div class="input-field col s4">                                      
+                                          <input type="text" id="duedate" class="datepicker">
+                                          <label>Tast Due Date</label>
+                                          </div>
+                                  </div>
+                                  <div class="col s12">
+                                        <textarea id="description">Task Description</textarea>
+                                  </div>
+                                  <div id="submitrow" class="col s12">
+                                  <input type="submit" name="submit" class="btn"value="Add Task"></input>
+                                </div>
+                                </form>
+                              </div>
+                        </div>   
+        </div>
+        <script src="script.js"></script>
+</body>
+
+</html>

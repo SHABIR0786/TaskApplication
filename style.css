@@ -1,0 +1,141 @@
+body{
+    padding:0px;
+    margin:0px;
+    background-color:#f4f4f4;
+}
+#container-body{
+   background-color:white;
+   margin-top: 74px;
+   width:90%;
+}
+.opennavbtn {
+    margin-left: 20px;
+    font-size: 25px;
+    cursor: pointer;
+    line-height: 65px;
+    color: white;
+}
+
+.closenavbtn {
+    margin-left: 20px;
+    color: white;
+    font-size: 25px;
+    line-height: 65px;
+    
+    cursor: pointer;
+}
+.mynavbar {
+    width: 100%;
+    height: 65px;
+    z-index:1;
+    position: fixed;
+    overflow:hidden;
+    background-color: rgba(13,126,222,1);
+}
+.mynavbar b{
+    font-size:20px;
+    margin-left:20px;
+   color:white;
+}
+.sidenavtop {
+    width: 100%;
+    height: 65px;
+    z-index:100;
+    background-color: rgba(13,126,222,1);
+    
+}
+.logout a{
+  float:right;
+  color:white;
+  font-size:30px;
+  line-height:65px;
+  margin-right:20px;
+  font-size:20px;
+}
+.sidenav {
+   background-color:white;
+   overflow:hidden;
+   position:absolute;
+    width: 250px;
+    height: 100%;
+    position: fixed;
+    margin-top: 0px;
+    z-index:1;
+    left: -250px;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+.sidenavtop span{
+    float:left;
+   
+}
+.sidenavtop span + span {
+    float: right;
+    color:white;
+    margin-right:10px;
+    cursor:pointer;
+    line-height:65px;
+    font-size:30px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+        .sidenav a {
+            font-size: 18px;
+        }
+}
+.sidenavbody {
+    margin-top: 8px;
+}
+.sidenavbody p span{
+    padding-left:20px;
+}
+.sidenavbody p {
+    width: 250px;
+    height: 35px;
+    line-height: 24px;
+    color: black;
+    cursor:pointer;
+    border-bottom: 1px solid #f4f4f4;
+}
+#addTask{
+float:right;
+width:30px;
+height:30px;
+color:#0d7ede;
+font-size:30px;
+}
+#addTask i{
+    cursor:pointer;
+}
+
+#modal1{
+    width:91%;
+}
+.model-header{
+    height:65px;
+    width:100%;
+    color:white;
+    padding:20px;
+    background-color:#0d7ede;
+}
+.model-header p{
+    font-size:27px;
+}
+
+.modal-footer{
+    height:40px;
+    text-align: right;
+    width:100%;
+    color:white;
+    background-color:#0d7ede;
+}
+#submitrow{
+    float:right;
+    padding-top:20px;
+}
+#submitrow input {
+    float:right;
+}
